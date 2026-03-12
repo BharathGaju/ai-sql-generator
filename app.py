@@ -55,7 +55,7 @@ def create_database():
     ]
 
     cursor.executemany("INSERT OR IGNORE INTO customers VALUES (?,?,?,?,?)", customers)
-    cursor.executemany("INSERT OR IGNORE INTO products VALUES (?,?,?,?,?)", products)
+    cursor.executemany("INSERT OR IGNORE INTO products VALUES (?,?,?,?)", products)
     cursor.executemany("INSERT OR IGNORE INTO orders VALUES (?,?,?,?,?,?)", orders)
 
     conn.commit()
